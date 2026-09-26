@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+httpx2
+pytest
+pytest-asyncio
