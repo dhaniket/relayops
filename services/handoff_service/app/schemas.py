@@ -47,14 +47,17 @@ class HandoffResponse(BaseModel):
     customer_id: str
 
     status: Literal[
+        "REQUESTED",
+        "ASSIGNING",
         "ASSIGNED",
         "WAITING_FOR_AGENT",
+        "RETRY_PENDING",
     ]
 
     required_skill: str
 
     agent_id: str | None = None
-
     agent_name: str | None = None
-
     queue_name: str | None = None
+
+    last_error: str | None = None
